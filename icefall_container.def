@@ -76,6 +76,7 @@ From: pytorch/pytorch:2.4.0-cuda12.4-cudnn9-devel
 %environment
     export PATH="~/.local/bin:/usr/local/cuda/bin:$PATH"
     export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
+    export PYTHONPATH=/icefall:$PYTHONPATH
 
 %help
     This container includes a PyTorch environment with various machine learning libraries installed.
