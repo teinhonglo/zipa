@@ -6,29 +6,6 @@ This repo is built upon the [Icefall](https://github.com/k2-fsa/icefall) library
 
 
 
-
-## Environment
-Please refer to `icefall_container.def` for a complete setup of the environment.
-
-A pre-built apptainer container can be found [here](https://huggingface.co/datasets/anyspeech/ipapack_plus_meta/blob/main/pytorch2.4.0-cuda12.4-icefall-container.sif).
-
-You can build an apptainer (which works without root access on HPC) with the given definition file.
-```
-apptainer build icefall.sif icefall_container.def
-```
-
-Generally speaking, packages below are required for minimal usage:
-  1. `torch torchaudio torchvision`
-  2. `lhotse` (for audio preprocessing)
-  3. `icefall` and `k2`. They must exactly match the torch version and cuda version. Instructions are available [here](https://icefall.readthedocs.io/en/latest/installation/index.html).
-  4. `huggingface_hub` (for downloading models and data)
-  5. Optional: `kaldifeat`. If you need to train from scratch, this library is also required. See instructions [here](https://csukuangfj.github.io/kaldifeat/installation/from_wheels.html). It must match the torch and cuda versions strictly.
-
-Run `export PYTHONPATH=/icefall:$PYTHONPATH` if the apptainer cannot find `icefall`.
-     
-# Inference
-
-
 ## ONNX Inference
 For users who are only interested in running the model for inference, we provide optimized ONNX models (FP32, FP16, and INT8) for efficient inference. We have included checkpoints in `fp32`, `fp16` and `int8` in the `Final Averaged Checkpoint` HF hubs below. The dependencies are reduced to minimal to facilitate usage. Note that low precision models might lead to slightly worse performance, despite the gain of efficiency. 
 **Thanks @guettli for the suggestion!**
@@ -76,7 +53,28 @@ Optional arguments:
 python inference/inference.py sample.wav --model-path checkpoints/zipa-t-small-300k/exp --model-type transducer --suffix .fp16.onnx
 ```
 
+# Train and evaluate models with `torch`
 
+## Environment
+Please refer to `icefall_container.def` for a complete setup of the environment.
+
+A pre-built apptainer container can be found [here](https://huggingface.co/datasets/anyspeech/ipapack_plus_meta/blob/main/pytorch2.4.0-cuda12.4-icefall-container.sif).
+
+You can build an apptainer (which works without root access on HPC) with the given definition file.
+```
+apptainer build icefall.sif icefall_container.def
+```
+
+Generally speaking, packages below are required for minimal usage:
+  1. `torch torchaudio torchvision`
+  2. `lhotse` (for audio preprocessing)
+  3. `icefall` and `k2`. They must exactly match the torch version and cuda version. Instructions are available [here](https://icefall.readthedocs.io/en/latest/installation/index.html).
+  4. `huggingface_hub` (for downloading models and data)
+  5. Optional: `kaldifeat`. If you need to train from scratch, this library is also required. See instructions [here](https://csukuangfj.github.io/kaldifeat/installation/from_wheels.html). It must match the torch and cuda versions strictly.
+
+Run `export PYTHONPATH=/icefall:$PYTHONPATH` if the apptainer cannot find `icefall`.
+     
+# Inference
 
 ## Batch inference with detailed error logs
 You might need to modify some paths in the `data_module.py` to point to your local data. 
