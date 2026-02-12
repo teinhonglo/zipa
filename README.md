@@ -4,7 +4,7 @@ Read [the ZIPA paper](https://aclanthology.org/2025.acl-long.961/) here!
 
 
 ## ONNX Inference
-For users who are only interested in running the model for inference, we provide optimized ONNX models (FP32, FP16, and INT8) for efficient inference (on your browsers and phones). We have included checkpoints in `fp32`, `fp16` and `int8` in the `Final Averaged Checkpoint` HF hubs below. The dependencies are reduced to minimal to facilitate usage. Note that low precision models might lead to slightly worse performance, despite the gain of efficiency. 
+For users who are only interested in running the model for inference, we provide optimized ONNX models (FP32, FP16, and INT8) for efficient inference (on your browsers and phones). We have included checkpoints in `fp32`, `fp16` and `int8` in the `Final Averaged Checkpoint` HF hubs below. The dependencies are reduced to minimal to facilitate usage. Note that low precision models might lead to slightly worse performance, despite the gain of efficiency. Sample results are [here](https://github.com/lingjzhu/zipa/blob/main/scripts/onnx_scripts/inference_results_all.txt).
 **Thanks @guettli for the suggestion!**
 
 ### Setup
