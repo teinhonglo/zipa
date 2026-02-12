@@ -15,7 +15,7 @@ For users who are only interested in running the model for inference, we provide
    ```bash
    pip install onnxruntime soundfile librosa lhotse torch
    ```
-2. Download exported models from HF hubs. 
+2. Download exported models from HF hubs. A list of models is available [here](https://github.com/lingjzhu/zipa/blob/main/README.md#pretrained-models). 
 
 ### Usage
 Use the simplified inference script in `inference/inference.py`.
