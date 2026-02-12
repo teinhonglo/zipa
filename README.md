@@ -1,13 +1,10 @@
 # ZIPA: A family of efficient speech models for multilingual phone recognition - ACL 2025
 
-[Paper](https://aclanthology.org/2025.acl-long.961/)
-
-This repo is built upon the [Icefall](https://github.com/k2-fsa/icefall) library in Next-gen Kaldi. The usage is almost the same. 
-
+Read [the ZIPA paper](https://aclanthology.org/2025.acl-long.961/) here!
 
 
 ## ONNX Inference
-For users who are only interested in running the model for inference, we provide optimized ONNX models (FP32, FP16, and INT8) for efficient inference. We have included checkpoints in `fp32`, `fp16` and `int8` in the `Final Averaged Checkpoint` HF hubs below. The dependencies are reduced to minimal to facilitate usage. Note that low precision models might lead to slightly worse performance, despite the gain of efficiency. 
+For users who are only interested in running the model for inference, we provide optimized ONNX models (FP32, FP16, and INT8) for efficient inference (on your browsers and phones). We have included checkpoints in `fp32`, `fp16` and `int8` in the `Final Averaged Checkpoint` HF hubs below. The dependencies are reduced to minimal to facilitate usage. Note that low precision models might lead to slightly worse performance, despite the gain of efficiency. 
 **Thanks @guettli for the suggestion!**
 
 ### Setup
@@ -54,6 +51,8 @@ python inference/inference.py sample.wav --model-path checkpoints/zipa-t-small-3
 ```
 
 # Train and evaluate models with `torch`
+This repo is built upon the [Icefall](https://github.com/k2-fsa/icefall) library in Next-gen Kaldi. The usage is almost the same. 
+
 
 ## Environment
 Please refer to `icefall_container.def` for a complete setup of the environment.
