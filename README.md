@@ -62,8 +62,13 @@ python inference/inference.py path/to/audio.wav --model-path checkpoints/zipa-t-
 To process a directory of audio files (wav, flac, mp3), use `inference/batch_inference.py`.
 
 ```bash
-python inference/batch_inference.py path/to/audio_dir --model-path checkpoints/zipa-cr-small-300k/exp/model.onnx --model-type ctc
+python inference/batch_inference.py path/to/audio_dir --model-path checkpoints/zipa-cr-small-300k/exp/model.onnx --model-type ctc --batch-size 32
 ```
+
+Optional arguments:
+- `--batch-size`: Batch size (default: 1).
+- `--tokens`: Path to `tokens.txt`.
+
 
 ### Example
 ```bash
