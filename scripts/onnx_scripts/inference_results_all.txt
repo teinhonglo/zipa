@@ -1,0 +1,121 @@
+Found 12 models.
+
+============================================================
+Running inference for: zipa-cr-large-300k
+============================================================
+  [fp32]
+    Predicted Phones: ▁ m ɪ s t ə ˞ k w ɪ l t ə ˞ ɪ z ð ə ə p ɑ s t ə l ʌ v ð ə m ɪ d ə l k l æ s ə z ə n d w i ɹ g l æ d t u w ɛ l k ə m h ɪ z g ɑ s p ə l
+  [fp16]
+    Predicted Phones: ▁ m ɪ s t ə ˞ k w ɪ l t ə ˞ ɪ z ð ə ə p ɑ s t ə l ʌ v ð ə m ɪ d ə l k l æ s ə z ə n d w i ɹ g l æ d t u w ɛ l k ə m h ɪ z g ɑ s p ə l
+  [int8]
+    Predicted Phones: ▁ m ɪ s t ə ˞ k w ɪ l t ə ɪ z ð ə ə p ɑ s t ə l v ð ə m ɪ d ə l k l æ s ə z ə n d w i ɹ g l æ d t u w ɛ l k ə m h ɪ z g ɑ s p ə l
+
+============================================================
+Running inference for: zipa-cr-large-500k
+============================================================
+  [fp32]
+    Predicted Phones: ▁ m ɪ s t ə ˞ k w ɪ l t ə ˞ ɪ z ð ə ə p ɑ s t ə l ʌ v ð ə m ɪ d ə l k l æ s ə z ə n d w i ɑ ɹ g l æ d t u w ɛ l k ə m h ɪ z g ɑ s p ə l
+  [fp16]
+    Predicted Phones: ▁ m ɪ s t ə ˞ k w ɪ l t ə ˞ ɪ z ð ə ə p ɑ s t ə l ʌ v ð ə m ɪ d ə l k l æ s ə z ə n d w i ɑ ɹ g l æ d t u w ɛ l k ə m h ɪ z g ɑ s p ə l
+  [int8]
+    Predicted Phones: ▁ m ɪ s t ə ˞ k w ɪ l t ə ˞ ɪ z ð ə ə p ɑ s t ə l ʌ v ð ə m ɪ d ə l k l æ s ə z ə n d w i ɑ ɹ g l æ d t u w ɛ l k ə m h ɪ z g ɔ s p ə l
+
+============================================================
+Running inference for: zipa-cr-ns-large-800k
+============================================================
+  [fp32]
+    Predicted Phones: ▁ m ɪ s t ə ˞ k w ɪ l t ə ˞ ɪ z ð ə ə p ɑ s t ə l ʌ v ð ə m ɪ d ə l k l æ s ə z ə n d w i ɑ ɹ g l æ d t u w ɛ l k ə m h ɪ z g ɑ s p ə l
+  [fp16]
+    Predicted Phones: ▁ m ɪ s t ə ˞ k w ɪ l t ə ˞ ɪ z ð ə ə p ɑ s t ə l ʌ v ð ə m ɪ d ə l k l æ s ə z ə n d w i ɑ ɹ g l æ d t u w ɛ l k ə m h ɪ z g ɑ s p ə l
+  [int8]
+    Predicted Phones: ▁ m ɪ s t ə ˞ k w ɪ l t ə ˞ ɪ z ð ə ə p ɑ s ə l ʌ v ð ə m ɪ d ə l k l æ s ə z ə n d w i ɑ ɹ g l æ d t u w ɛ l k ə m h ɪ z g ɑ s p ə l
+
+============================================================
+Running inference for: zipa-cr-ns-large-nodiacritics-780k
+============================================================
+  [fp32]
+    Predicted Phones: ▁ m ɪ s t ə k w ɪ l t ə ɪ z ð ə ə p ɑ s ə l ʌ v ð ə m ɪ d ə l k l æ s ə z ə n d w i ɑ ɹ g l æ d t u w ɛ l k ə m h ɪ z g ɑ s p ə l
+  [fp16]
+    Predicted Phones: ▁ m ɪ s t ə k w ɪ l t ə ɪ z ð ə ə p ɑ s ə l ʌ v ð ə m ɪ d ə l k l æ s ə z ə n d w i ɑ ɹ g l æ d t u w ɛ l k ə m h ɪ z g ɑ s p ə l
+  [int8]
+    Predicted Phones: ▁ m ɪ s t ə k w ɪ l t ə ɪ z ð ə ə p ɑ s ə l ʌ v ð ə m ɪ d ə l k l æ s ə z ə n d w i ɑ ɹ g l æ d t u w ɛ l k ə m h ɪ z g ɑ s p ə l
+
+============================================================
+Running inference for: zipa-cr-ns-small-700k
+============================================================
+  [fp32]
+    Predicted Phones: ▁ m ɪ s t ə ˞ k w ɪ l t ə ˞ ɪ z ð ə ə p ɑ s t ə l ʌ v ð ə m ɪ d ə l k l æ s ə z ə n d w i ɑ ɹ g l æ d t u w ɛ l k ə m h ɪ z g ɔ s p ə l
+  [fp16]
+    Predicted Phones: ▁ m ɪ s t ə ˞ k w ɪ l t ə ˞ ɪ z ð ə ə p ɑ s t ə l ʌ v ð ə m ɪ d ə l k l æ s ə z ə n d w i ɑ ɹ g l æ d t u w ɛ l k ə m h ɪ z g ɔ s p ə l
+  [int8]
+    Predicted Phones: ▁ m ɪ s t ə ˞ k w ɪ l t ə ˞ ɪ z ð ə ə p ɑ s t ə l ʌ v ð ə m ɪ d ə l k l æ s ə z ə n d w i ɑ ɹ g l æ d t u w ɛ l k ə m h ɪ z g ɑ s p ə l
+
+============================================================
+Running inference for: zipa-cr-ns-small-nodiacritics-700k
+============================================================
+  [fp32]
+    Predicted Phones: ▁ m ɪ s t ə k w ɪ l t ə ɪ z ð ə ə p ɑ s ə l ʌ v ð ə m ɪ d ə l k l æ s ə z ə n d w i ɑ ɹ ɹ g l æ d t u w ɛ l k ə m h ɪ z g ɑ s p ə l
+  [fp16]
+    Predicted Phones: ▁ m ɪ s t ə k w ɪ l t ə ɪ z ð ə ə p ɑ s ə l ʌ v ð ə m ɪ d ə l k l æ s ə z ə n d w i ɑ ɹ ɹ g l æ d t u w ɛ l k ə m h ɪ z g ɑ s p ə l
+  [int8]
+    Predicted Phones: ▁ m ɪ s t ə k w ɪ l t ə ɪ z ð ə ə p ɑ s ə l ʌ v ð ə m ɪ d ə l k l æ s ə z ə n d w i ɑ ɹ g l æ d t u w ɛ l k ə m h ɪ z g ɔ s p ə l
+
+============================================================
+Running inference for: zipa-cr-small-300k
+============================================================
+  [fp32]
+    Predicted Phones: ▁ m ɪ s t ə ˞ k w ɪ l t ə ˞ ɪ z ð ə ə p ɑ s ə l ə v ð ə m ɪ d ə l k l æ s ə z ə n d w ɪ ɹ g l æ d t u w ɛ l k ə m h ɪ z g ɑ s p ə l
+  [fp16]
+    Predicted Phones: ▁ m ɪ s t ə ˞ k w ɪ l t ə ˞ ɪ z ð ə ə p ɑ s ə l ə v ð ə m ɪ d ə l k l æ s ə z ə n d w ɪ ɹ g l æ d t u w ɛ l k ə m h ɪ z g ɑ s p ə l
+  [int8]
+    Predicted Phones: ▁ m ɪ s t ə k w ɪ l t ə ˞ ɪ z ə ə p ɑ s ə l ə v ð ə m ɪ d ə l k l æ s ə z ə n d w i ɹ g l æ d t u w ɛ l k ə m h ɪ z g ɑ s p ə l
+
+============================================================
+Running inference for: zipa-cr-small-500k
+============================================================
+  [fp32]
+    Predicted Phones: ▁ m ɪ s t ə ˞ k w ɪ l t ə ˞ ɪ z ð ə ə p ɑ s t ə l ʌ v ð ə m ɪ d ə l k l æ s ə z ə n d w i ɑ ɹ g l æ d t u w ɛ l k ə m h ɪ z g ɑ s p ə l
+  [fp16]
+    Predicted Phones: ▁ m ɪ s t ə ˞ k w ɪ l t ə ˞ ɪ z ð ə ə p ɑ s t ə l ʌ v ð ə m ɪ d ə l k l æ s ə z ə n d w i ɑ ɹ g l æ d t u w ɛ l k ə m h ɪ z g ɑ s p ə l
+  [int8]
+    Predicted Phones: ▁ m ɪ s t ə ˞ k w ɪ l t ə ˞ ɪ z ð ə ə p ɑ s t ə l ʌ v ð ə m ɪ d ə l k l æ s ə z ə n d w i ɑ ɹ g l æ d t u w ɛ l k ə m h ɪ z g ɔ ɑ s p ə l
+
+============================================================
+Running inference for: zipa-t-large-300k
+============================================================
+  [fp32]
+    Predicted Phones: ▁ m ɪ s t ə ˞ k w ɪ l t ə ˞ ɪ z ð ə ə p ɑ s ə l ʌ v ð ə m ɪ d ə l k l æ s ə z ə n d w i ɑ ɹ g l æ d t u w ɛ l k ə m h ɪ z g ɑ s p ə l
+  [fp16]
+    Predicted Phones: ▁ m ɪ s t ə ˞ k w ɪ l t ə ˞ ɪ z ð ə ə p ɑ s ə l ʌ v ð ə m ɪ d ə l k l æ s ə z ə n d w i ɑ ɹ g l æ d t u w ɛ l k ə m h ɪ z g ɑ s p ə l
+  [int8]
+    Predicted Phones: ▁ m ɪ s t ə ˞ k w ɪ l t ə ˞ ɪ z ð ə ə p ɑ s ə l ʌ v ð ə m ɪ d ə l k l æ s ə z ə n d w i ɑ ɹ g l æ d t u w ɛ l k ə m h ɪ z g ɑ s p ə l
+
+============================================================
+Running inference for: zipa-t-large-500k
+============================================================
+  [fp32]
+    Predicted Phones: ▁ m ɪ s t ə ˞ k w ɪ l t ə ˞ ɪ z ð ə ə p ɑ s ə l ʌ v ð ə m ɪ d ə l k l æ s ə z ə n d w i ɑ ɹ g l æ d t u w ɛ l k ə m h ɪ z g ɑ s p ə l
+  [fp16]
+    Predicted Phones: ▁ m ɪ s t ə ˞ k w ɪ l t ə ˞ ɪ z ð ə ə p ɑ s ə l ʌ v ð ə m ɪ d ə l k l æ s ə z ə n d w i ɑ ɹ g l æ d t u w ɛ l k ə m h ɪ z g ɑ s p ə l
+  [int8]
+    Predicted Phones: ▁ m ɪ s t ə ˞ k w ɪ l t ə ˞ ɪ z ð ə ə p ɑ s ə l ʌ v ð ə m ɪ d ə l k l æ s ə z ə n d w i ɑ ɹ g l æ d t u w ɛ l k ə m h ɪ z g ɑ s p ə l
+
+============================================================
+Running inference for: zipa-t-small-300k
+============================================================
+  [fp32]
+    Predicted Phones: ▁ m ɪ s t ə ˞ k w ɪ l t ə ˞ ɪ z ð ə ə p ɑ s ə l ʌ v ð ə m ɪ d ə l k l æ s ɪ z ə n d w i ɑ ɹ g l æ d t u w ɛ l k ə m h ɪ z g ɑ s p ə l
+  [fp16]
+    Predicted Phones: ▁ m ɪ s t ə ˞ k w ɪ l t ə ˞ ɪ z ð ə ə p ɑ s ə l ʌ v ð ə m ɪ d ə l k l æ s ɪ z ə n d w i ɑ ɹ g l æ d t u w ɛ l k ə m h ɪ z g ɑ s p ə l
+  [int8]
+    Predicted Phones: ▁ m ɪ s t ə k w ɪ l t ə ˞ ɪ z ð ə ə p ɑ s ə l ʌ v ð ə m ɪ d ə l k l æ s ɪ z ə n d w i ɑ ɹ g l æ d t u w ɛ l k ə m h ɪ z g ɑ s p ə l
+
+============================================================
+Running inference for: zipa-t-small-500k
+============================================================
+  [fp32]
+    Predicted Phones: ▁ m ɪ s t ə ˞ k w ɪ l t ə ˞ ɪ z ð ə ə p ɑ s ə l ə v ð ə m ɪ d ə l k l æ s ə z ə n d w i ɑ ɹ g l æ d t u w ɛ l k ə m h ɪ z g ɑ s p ə l
+  [fp16]
+    Predicted Phones: ▁ m ɪ s t ə ˞ k w ɪ l t ə ˞ ɪ z ð ə ə p ɑ s ə l ə v ð ə m ɪ d ə l k l æ s ə z ə n d w i ɑ ɹ g l æ d t u w ɛ l k ə m h ɪ z g ɑ s p ə l
+  [int8]
+    Predicted Phones: ▁ m ɪ s t ə ˞ k w ɪ l t ə ˞ ɪ z ð ə ə p ɑ s ə l ə v ð ə m ɪ d ə l k l æ s ə z ə n d w i ɑ ɹ g l æ d t u w ɛ l k ə m h ɪ z g ɑ s p ə l

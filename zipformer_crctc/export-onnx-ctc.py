@@ -73,6 +73,7 @@ import onnx
 import torch
 import torch.nn as nn
 from onnxruntime.quantization import QuantType, quantize_dynamic
+from onnxconverter_common import float16
 from scaling_converter import convert_scaled_to_non_scaled
 from train import add_model_arguments, get_model, get_params
 from zipformer import Zipformer2
@@ -151,6 +152,13 @@ def get_parser():
         type=int,
         default=2,
         help="The context size in the decoder. 1 means bigram; 2 means tri-gram",
+    )
+
+    parser.add_argument(
+        "--fp16",
+        type=str2bool,
+        default=False,
+        help="Whether to export models in fp16",
     )
 
     add_model_arguments(parser)
@@ -414,6 +422,14 @@ def main():
         opset_version=opset_version,
     )
     logging.info(f"Exported to {filename}")
+
+    if params.fp16:
+        logging.info("Generate fp16 models")
+        model_onnx = onnx.load(filename)
+        model_fp16 = float16.convert_float_to_float16(model_onnx, keep_io_types=True)
+        filename_fp16 = params.exp_dir / f"model.fp16.onnx"
+        onnx.save(model_fp16, filename_fp16)
+
 
     # Generate int8 quantization models
     # See https://onnxruntime.ai/docs/performance/model-optimizations/quantization.html#data-type-selection

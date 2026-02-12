@@ -4,6 +4,9 @@
 
 This repo is built upon the [Icefall](https://github.com/k2-fsa/icefall) library in Next-gen Kaldi. The usage is almost the same. 
 
+
+
+
 ## Environment
 Please refer to `icefall_container.def` for a complete setup of the environment.
 
@@ -21,10 +24,55 @@ Generally speaking, packages below are required for minimal usage:
   4. `huggingface_hub` (for downloading models and data)
   5. Optional: `kaldifeat`. If you need to train from scratch, this library is also required. See instructions [here](https://csukuangfj.github.io/kaldifeat/installation/from_wheels.html). It must match the torch and cuda versions strictly.
 
-
+Run `export PYTHONPATH=/icefall:$PYTHONPATH` if the apptainer cannot find `icefall`.
      
-## Inference
-### Batch inference with detailed error logs
+# Inference
+
+
+## ONNX Inference
+For users who are only interested in running the model for inference, we provide optimized ONNX models (FP32, FP16, and INT8) for efficient inference. We have included checkpoints in `fp32`, `fp16` and `int8` in the `Final Averaged Checkpoint` HF hubs below. The dependencies are reduced to minimal to facilitate usage. Note that low precision models might lead to slightly worse performance, despite the gain of efficiency. 
+
+### Setup
+1. Install dependencies:
+   ```bash
+   pip install onnxruntime soundfile librosa lhotse torch
+   ```
+2. Download exported models from HF hubs. 
+
+### Usage
+Use the simplified inference script in `inference/inference.py`.
+
+#### CTC Models
+```bash
+python inference/inference.py path/to/audio.wav --model-path checkpoints/zipa-cr-small-300k/exp/model.onnx --model-type ctc
+```
+
+#### Transducer Models
+For Transducer, pass the **directory** containing the ONNX files (`encoder`, `decoder`, `joiner`).
+```bash
+python inference/inference.py path/to/audio.wav --model-path checkpoints/zipa-t-small-300k/exp --model-type transducer
+```
+
+#### Optional Arguments
+- `--tokens`: Path to `tokens.txt` (default: `ipa_simplified/tokens.txt`).
+- `--suffix`: Suffix for Transducer files, e.g., `.fp16.onnx` or `.int8.onnx` (default: `.onnx`).
+
+### Batch Inference
+To process a directory of audio files (wav, flac, mp3), use `inference/batch_inference.py`.
+
+```bash
+python inference/batch_inference.py path/to/audio_dir --model-path checkpoints/zipa-cr-small-300k/exp/model.onnx --model-type ctc
+```
+
+### Example
+```bash
+# Run FP16 Transducer inference
+python inference/inference.py sample.wav --model-path checkpoints/zipa-t-small-300k/exp --model-type transducer --suffix .fp16.onnx
+```
+
+
+
+## Batch inference with detailed error logs
 You might need to modify some paths in the `data_module.py` to point to your local data. 
 ```  
 python zipformer_crctc/ctc_decode.py --iter 800000 --avg 10 --exp-dir /scratch/lingjzhu_root/lingjzhu1/lingjzhu/zipformer_exp/zipformer_large_crctc_75_pretrained  \
@@ -36,7 +84,7 @@ python zipformer_crctc/ctc_decode.py --iter 800000 --avg 10 --exp-dir /scratch/l
 
 ```
 
-### Simple inference
+## Simple inference
 
 Please check out `zipa_ctc_inference.py` and `zipa_transducer_inference.py` for example usage.
 
@@ -165,3 +213,4 @@ python zipformer_crctc/train.py --world-size 2 --num-epochs 2 --start-epoch 1 --
 --decoder-dim 1024 --joiner-dim 1024 --query-head-dim 64 --value-head-dim 48 --num-heads 6,6,6,8,6,6 \
 --num-buckets 8 --num-workers 4 --unsup-cr-ctc-loss-scale 0.5 --use-unsup-cr-ctc True --remove-diacritics True
 ```
+
