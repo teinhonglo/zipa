@@ -1,9 +1,0 @@
-__pycache__/
-exp
-data-*
-conf
-run_*
-corpus
-ctcdecode
-wandb
-prep_data
